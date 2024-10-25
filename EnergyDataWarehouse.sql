@@ -28,14 +28,13 @@ CREATE TABLE dim_location (
 -- Fact tables
 
 CREATE TABLE fact_energy_consumption (
-    fact_id INT PRIMARY KEY AUTO_INCREMENT,
-    time_id INT NOT NULL,
-    location_id INT NOT NULL,
-    municipalityparishcode INT NOT NULL,
-    energy_consumption DECIMAL(15, 2) NOT NULL,
+    time_id INT ,
+    location_id INT ,
+    energy_consumption DECIMAL(15, 3) NOT NULL,
     count_smart INT NOT NULL,
     count_non_smart INT NOT NULL,
     FOREIGN KEY (time_id) REFERENCES dim_time(time_id),
-    FOREIGN KEY (location_id) REFERENCES dim_location(location_id)
+    FOREIGN KEY (location_id) REFERENCES dim_location(location_id),
+    PRIMARY KEY (time_id, location_id)
 );
 
