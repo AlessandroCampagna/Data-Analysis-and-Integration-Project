@@ -6,9 +6,9 @@
       <Hierarchy name="Time Hierarchy" visible="true" hasAll="true" allMemberName="All Years" primaryKey="time_id">
         <Table name="dim_time">
         </Table>
-        <Level name="Year" visible="true" column="year" type="Integer" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
+	<Level name="Year" visible="true" column="year" type="Integer" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
         </Level>
-        <Level name="Season" visible="true" column="season" type="String" uniqueMembers="false" levelType="TimeQuarters" hideMemberIf="Never">
+	<Level name="Season" visible="true" column="season" type="String" uniqueMembers="false" levelType="TimeQuarters" hideMemberIf="Never">
         </Level>
         <Level name="Month" visible="true" column="month" type="Integer" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
         </Level>

@@ -631,7 +631,7 @@
     <hop>
       <from>Select values 3</from>
       <to>Database lookup</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Sort rows 5</from>
