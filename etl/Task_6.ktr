@@ -430,7 +430,7 @@
     <created_date>2024/10/24 16:13:43.796</created_date>
     <modified_user>-</modified_user>
     <modified_date>2024/10/24 16:13:43.796</modified_date>
-    <key_for_session_key>H4sIAAAAAAAA/wMAAAAAAAAAAAA=</key_for_session_key>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -631,7 +631,7 @@
     <hop>
       <from>Select values 3</from>
       <to>Database lookup</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Sort rows 5</from>
@@ -650,7 +650,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>${Internal.Entry.Current.Directory}/Dataset A.csv</filename>
+    <filename>/home/aid/Downloads/dataset_A.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -669,7 +669,7 @@
         <name>﻿Year</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -680,7 +680,7 @@
         <name>Month</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -691,7 +691,7 @@
         <name>Date</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>7</length>
@@ -702,7 +702,7 @@
         <name>District</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>16</length>
@@ -713,10 +713,10 @@
         <name>Municipality</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>27</length>
+        <length>22</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -724,10 +724,10 @@
         <name>Parish</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>48</length>
+        <length>51</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -735,7 +735,7 @@
         <name>Includes Smart Meter</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>3</length>
@@ -746,7 +746,7 @@
         <name>Number of CPE's</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -757,7 +757,7 @@
         <name>DistrictCode</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -768,7 +768,7 @@
         <name>DistrictMunicipalityCode</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -779,18 +779,18 @@
         <name>DistrictMunicipalityParishCode</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>15</length>
-        <precision>0</precision>
+        <length>6</length>
+        <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
         <name>Active Contract</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>3</length>
@@ -823,7 +823,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>${Internal.Entry.Current.Directory}/Dataset B.csv</filename>
+    <filename>/home/aid/Downloads/dataset_B.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -842,7 +842,7 @@
         <name>﻿Year</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -853,7 +853,7 @@
         <name>Month</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -864,7 +864,7 @@
         <name>Date</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>7</length>
@@ -875,10 +875,10 @@
         <name>District</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>10</length>
+        <length>14</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -886,10 +886,10 @@
         <name>Municipality</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>22</length>
+        <length>21</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -897,7 +897,7 @@
         <name>parish</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>30</length>
@@ -908,7 +908,7 @@
         <name>Voltage level</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>32</length>
@@ -917,12 +917,12 @@
       </field>
       <field>
         <name>Active Energy (kWh)</name>
-        <type>BigNumber</type>
-        <format>#.###</format>
-        <currency>USD</currency>
+        <type>Number</type>
+        <format>#.#</format>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>12</length>
+        <length>11</length>
         <precision>3</precision>
         <trim_type>none</trim_type>
       </field>
@@ -930,7 +930,7 @@
         <name>DistrictCode</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -941,7 +941,7 @@
         <name>DistrictMunicipalityCode</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>4</length>
@@ -952,7 +952,7 @@
         <name>DistrictMunicipalityParishCode</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>6</length>
@@ -963,7 +963,7 @@
         <name>mes_int</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>

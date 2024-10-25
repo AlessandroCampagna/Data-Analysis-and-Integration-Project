@@ -430,7 +430,7 @@
     <created_date>2024/10/24 15:02:27.015</created_date>
     <modified_user>-</modified_user>
     <modified_date>2024/10/24 15:02:27.015</modified_date>
-    <key_for_session_key>H4sIAAAAAAAA/wMAAAAAAAAAAAA=</key_for_session_key>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -520,7 +520,7 @@
     </hop>
     <hop>
       <from>Sort rows</from>
-      <to>Table output</to>
+      <to>Insert / update</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -535,7 +535,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>/Users/joaorocha/ist/AID/Dataset B.csv</filename>
+    <filename>/home/aid/Downloads/dataset_B.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -554,7 +554,7 @@
         <name>﻿Year</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -565,7 +565,7 @@
         <name>Month</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -576,7 +576,7 @@
         <name>Date</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>7</length>
@@ -587,10 +587,10 @@
         <name>District</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>10</length>
+        <length>14</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -598,10 +598,10 @@
         <name>Municipality</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>22</length>
+        <length>21</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -609,7 +609,7 @@
         <name>parish</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>30</length>
@@ -620,7 +620,7 @@
         <name>Voltage level</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>32</length>
@@ -629,12 +629,12 @@
       </field>
       <field>
         <name>Active Energy (kWh)</name>
-        <type>BigNumber</type>
-        <format>#.###</format>
-        <currency>USD</currency>
+        <type>Number</type>
+        <format>#.#</format>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>12</length>
+        <length>11</length>
         <precision>3</precision>
         <trim_type>none</trim_type>
       </field>
@@ -642,7 +642,7 @@
         <name>DistrictCode</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -653,7 +653,7 @@
         <name>DistrictMunicipalityCode</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>4</length>
@@ -664,7 +664,7 @@
         <name>DistrictMunicipalityParishCode</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>6</length>
@@ -675,7 +675,7 @@
         <name>mes_int</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -822,8 +822,8 @@
     </GUI>
   </step>
   <step>
-    <name>Table output</name>
-    <type>TableOutput</type>
+    <name>Insert / update</name>
+    <type>InsertUpdate</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -833,24 +833,39 @@
       <schema_name/>
     </partitioning>
     <connection>EnergyDataWarehouse</connection>
-    <schema>EnergyDataWarehouse</schema>
-    <table>dim_time</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>N</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-    </fields>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>EnergyDataWarehouse</schema>
+      <table>dim_time</table>
+      <key>
+        <name>year</name>
+        <field>year</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>month</name>
+        <field>month</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>year</name>
+        <rename>year</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>month</name>
+        <rename>month</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>season</name>
+        <rename>season</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -860,7 +875,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>784</xloc>
+      <xloc>752</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
