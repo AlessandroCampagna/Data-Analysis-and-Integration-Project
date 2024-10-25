@@ -431,7 +431,7 @@
     <created_date>2024/10/23 19:07:01.930</created_date>
     <modified_user>-</modified_user>
     <modified_date>2024/10/23 19:07:01.930</modified_date>
-    <key_for_session_key>H4sIAAAAAAAA/wMAAAAAAAAAAAA=</key_for_session_key>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -542,7 +542,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>/Users/joaorocha/ist/AID/Dataset B.csv</filename>
+    <filename>/home/aid/Downloads/dataset_B.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -561,7 +561,7 @@
         <name>﻿Year</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -572,7 +572,7 @@
         <name>Month</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -583,7 +583,7 @@
         <name>Date</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>7</length>
@@ -594,10 +594,10 @@
         <name>District</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>10</length>
+        <length>14</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -605,10 +605,10 @@
         <name>Municipality</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>22</length>
+        <length>21</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -616,7 +616,7 @@
         <name>parish</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>30</length>
@@ -627,7 +627,7 @@
         <name>Voltage level</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>32</length>
@@ -636,12 +636,12 @@
       </field>
       <field>
         <name>Active Energy (kWh)</name>
-        <type>BigNumber</type>
-        <format>#.###</format>
-        <currency>USD</currency>
+        <type>Number</type>
+        <format>#.#</format>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>12</length>
+        <length>11</length>
         <precision>3</precision>
         <trim_type>none</trim_type>
       </field>
@@ -649,7 +649,7 @@
         <name>DistrictCode</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -660,7 +660,7 @@
         <name>DistrictMunicipalityCode</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>4</length>
@@ -671,7 +671,7 @@
         <name>DistrictMunicipalityParishCode</name>
         <type>String</type>
         <format/>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>6</length>
@@ -682,7 +682,7 @@
         <name>mes_int</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>USD</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -699,94 +699,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>80</xloc>
-      <yloc>144</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>Municipality</name>
-        <rename>municipality</rename>
-      </field>
-      <field>
-        <name>District</name>
-        <rename>district</rename>
-      </field>
-      <field>
-        <name>parish</name>
-        <rename/>
-      </field>
-      <field>
-        <name>DistrictMunicipalityParishCode</name>
-        <rename>municipalityparishcode</rename>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>224</xloc>
-      <yloc>144</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Sort rows</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>%%java.io.tmpdir%%</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>Y</unique_rows>
-    <fields>
-      <field>
-        <name>municipalityparishcode</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>640</xloc>
-      <yloc>144</yloc>
+      <xloc>176</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -829,8 +743,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>512</xloc>
-      <yloc>144</yloc>
+      <xloc>608</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -869,8 +783,51 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>352</xloc>
-      <yloc>144</yloc>
+      <xloc>448</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>Municipality</name>
+        <rename>municipality</rename>
+      </field>
+      <field>
+        <name>District</name>
+        <rename>district</rename>
+      </field>
+      <field>
+        <name>parish</name>
+      </field>
+      <field>
+        <name>DistrictMunicipalityParishCode</name>
+        <rename>municipalityparishcode</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>320</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -900,8 +857,50 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>784</xloc>
-      <yloc>144</yloc>
+      <xloc>880</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>Y</unique_rows>
+    <fields>
+      <field>
+        <name>municipalityparishcode</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -944,8 +943,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>928</xloc>
-      <yloc>144</yloc>
+      <xloc>1024</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
